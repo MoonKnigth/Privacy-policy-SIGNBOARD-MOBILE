@@ -1,0 +1,88 @@
+:root {
+  --bg: #fff;
+  --text: #111;
+  --muted: #6b7280;
+  --card: #f9fafb;
+  --border: #e5e7eb;
+  --brand: #2563eb;
+  --brand-ink: #1d4ed8;
+  --ink: #0f172a;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: "Noto Sans Thai", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+}
+
+.container { max-width: 920px; margin: 0 auto; padding: 24px; }
+h1 { margin: 0 0 8px; font-size: 2rem; letter-spacing: 0.2px; }
+h2 { margin: 0 0 10px; font-size: 1.2rem; }
+.muted { color: var(--muted); }
+
+.lead { margin-top: 6px; color: #1f2937; }
+
+.hero {
+  background: conic-gradient(from 180deg at 0% 0%, #eef2ff, #ffffff);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  margin-top: 20px;
+  padding: 20px 18px;
+}
+.hero__eyebrow {
+  display: inline-block;
+  background: #e0e7ff;
+  color: var(--brand-ink);
+  border: 1px solid #c7d2fe;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.divider { margin: 0 6px; color: #9ca3af; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 10px 0 24px;
+}
+
+.summary { margin: 0; padding-left: 20px; }
+.summary li { margin: 4px 0; }
+
+.accordion { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+.accordion__header {
+  width: 100%;
+  text-align: left;
+  padding: 14px 16px;
+  background: #fff;
+  border: none;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+}
+.accordion__header:first-of-type { border-top: none; }
+.accordion__header[aria-expanded="true"] { background: #f1f5ff; }
+.accordion__icon { transition: transform .2s ease; }
+.accordion__header[aria-expanded="true"] .accordion__icon { transform: rotate(90deg); }
+
+.accordion__panel {
+  padding: 0 16px 14px 16px;
+  background: #fff;
+  border-top: 1px solid var(--border);
+}
+
+address { font-style: normal; }
+a { color: var(--brand-ink); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.footer { border-top: 1px solid var(--border); margin-top: 24px; padding-top: 16px; color: var(--muted); }
